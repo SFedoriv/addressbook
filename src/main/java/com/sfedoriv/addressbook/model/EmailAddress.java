@@ -11,7 +11,7 @@ import javax.persistence.Id;
 
 @Entity
 @AllArgsConstructor
-public class emailAddress {
+public class EmailAddress {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Getter
