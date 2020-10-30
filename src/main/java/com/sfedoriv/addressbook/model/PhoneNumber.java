@@ -11,12 +11,7 @@ import javax.persistence.Id;
 
 @Entity
 @AllArgsConstructor
-public class PhoneNumber {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Getter
-    @Setter
-    private Long Id;
+public class PhoneNumber extends BaseEntity{
 
     @Getter
     @Setter

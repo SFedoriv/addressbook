@@ -11,10 +11,6 @@ import javax.persistence.Id;
 
 @Entity
 @AllArgsConstructor
-public class Meeting {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Getter
-    @Setter
-    private Long Id;
+public class Meeting extends BaseEntity{
+
 }

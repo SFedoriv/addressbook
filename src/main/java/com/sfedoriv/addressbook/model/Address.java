@@ -11,12 +11,7 @@ import javax.persistence.Id;
 
 @Entity
 @AllArgsConstructor
-public class Address {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Getter
-    @Setter
-    private Long Id;
+public class Address extends BaseEntity{
 
     @Getter
     @Setter

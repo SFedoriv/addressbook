@@ -1,23 +1,15 @@
 package com.sfedoriv.addressbook.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
+@RequiredArgsConstructor
 @AllArgsConstructor
-public class Person {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Getter
-    @Setter
-    private Long Id;
+public class Person extends BaseEntity{
 
     @Getter
     @Setter
@@ -26,4 +18,9 @@ public class Person {
     @Getter
     @Setter
     private String lastName;
+
+    @Getter
+    @Setter
+    @OneToMany
+    private Set<EmailAddress> emailAddresses = new HashSet<>();
 }
